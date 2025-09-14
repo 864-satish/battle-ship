@@ -94,5 +94,5 @@ curl --location 'http://localhost:3002/battle-ship/start-game'
 - Winner is announced when the game ends
 
 ## Console Output
-![BattleShip Console output](./assets/battleShip-output-1.png)
-![BattleShip Console output](./assets/battleShip-output-2.png)
+![BattleShip Console output](https://github.com/864-satish/battle-ship/blob/main/assets/battleship-output-1.png)
+![BattleShip Console output](https://github.com/864-satish/battle-ship/blob/main/assets/battleship-output-2.png)
