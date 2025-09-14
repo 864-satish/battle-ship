@@ -52,33 +52,37 @@ The API will be available at `http://localhost:3002`
 
 1. **Initialize Game** (10x10 grid):
 ```bash
-curl -X POST http://localhost:3002/battle-ship/init-game \
-  -H "Content-Type: application/json" \
-  -d '{"n": 10, "playerA": "Alice", "playerB": "Bob"}'
+curl --location 'http://localhost:3002/battle-ship/init-game' \
+--header 'Content-Type: application/json' \
+--data '{
+    "n": 10,
+    "playerA": "Satish",
+    "playerB": "Abhishek"
+}'
 ```
 
 2. **Add Ship** (ID: SH-1, Size: 2):
 ```bash
-curl -X POST http://localhost:3002/battle-ship/add-ship \
-  -H "Content-Type: application/json" \
-  -d '{
-    "id": "SH-1",
-    "size": 2,
-    "xPositionPlayerA": 7,
-    "yPositionPlayerA": 7,
-    "xPositionPlayerB": 1,
-    "yPositionPlayerB": 1
-  }'
+curl --location 'http://localhost:3002/battle-ship/add-ship' \
+--header 'Content-Type: application/json' \
+--data '{
+    "id": "SH1",
+    "size": 4,
+    "xPositionPlayerA": 0,
+    "yPositionPlayerA": 0,
+    "xPositionPlayerB": 5,
+    "yPositionPlayerB": 6
+}'
 ```
 
 3. **View Battlefield**:
 ```bash
-curl -X GET http://localhost:3002/battle-ship/view-battle-field
+curl --location 'http://localhost:3002/battle-ship/view-battle-field'
 ```
 
 4. **Start Game**:
 ```bash
-curl -X GET http://localhost:3002/battle-ship/start-game
+curl --location 'http://localhost:3002/battle-ship/start-game'
 ```
 
 ## Game Rules
@@ -88,3 +92,7 @@ curl -X GET http://localhost:3002/battle-ship/start-game
 - Player B fires in the left half of the grid
 - Game continues until all ships of one player are destroyed
 - Winner is announced when the game ends
+
+## Console Output
+![BattleShip Console output](./assets/battleShip-output-1.png)
+![BattleShip Console output](./assets/battleShip-output-2.png)
